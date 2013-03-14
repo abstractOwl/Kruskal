@@ -8,4 +8,4 @@ clean:
 	rm prog3
 
 run:
-	./prog3 < test.in
+	./prog3 < ~cs130a/PA3/testcase

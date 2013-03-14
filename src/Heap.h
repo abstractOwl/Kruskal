@@ -1,22 +1,18 @@
 #ifndef HEAP_H
 #define HEAP_H
 
-#include <string>
-
-using namespace std;
-
 typedef struct HeapNode HeapNode;
 struct HeapNode
 {
 	int		weight;
-	string*	name;
+	int		v1, v2;
 };
 
 class Heap
 {
 public:
 	Heap(int size);
-	HeapNode*	add(string *name, int weight);
+	HeapNode*	add(int v1, int v2, int weight);
 	HeapNode*	min();
 	HeapNode*	remove();
 
