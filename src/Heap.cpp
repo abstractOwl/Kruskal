@@ -9,10 +9,11 @@ Heap::Heap(int size)
 }
 
 // Add new node to heap
-HeapNode* Heap::add(string* name, int weight)
+HeapNode* Heap::add(int v1, int v2, int weight)
 {
 	HeapNode* node		=	new HeapNode;
-	node->name			=	name;
+	node->v1			=	v1;
+	node->v2			=	v2;
 	node->weight		=	weight;
 	entries[insertPos]	=	node;
 
@@ -36,7 +37,6 @@ HeapNode* Heap::remove()
 
 	// Replace root with last element
 	entries[0] = entries[insertPos - 1];
-	entries[insertPos - 1] = NULL;
 	insertPos--;
 
 	downHeap(0);
